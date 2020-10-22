@@ -4,7 +4,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
+    public static void main(String[] args){
         String message = "Вы неверно заполнили данные.\n"+
                 "Введите их в следующем виде: dd/MM/yyyy идентификатор.\n"+
                 "Пример: 21/02/2019 USD";
@@ -19,6 +19,8 @@ public class Main {
 
         }catch (ArrayIndexOutOfBoundsException e){
             System.out.println(message);
+        }catch (IOException | SAXException | ParserConfigurationException e){
+            e.printStackTrace();
         }
     }
 }
