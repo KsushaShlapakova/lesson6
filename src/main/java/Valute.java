@@ -20,4 +20,8 @@ public class Valute {
     public String getCharCode(){
         return charCode;
     }
+
+    public String toString(){
+        return "1 " + name + " = " + value + " Российских рубля.";
+    }
 }
